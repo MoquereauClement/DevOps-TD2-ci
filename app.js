@@ -7,4 +7,6 @@ function getRandomChampion(champions, random = Math.random) {
   return champions[index];
 }
 
-module.exports = { add , getRandomChampion};
+if (typeof module !== "undefined") {
+    module.exports = { add , getRandomChampion};
+}
