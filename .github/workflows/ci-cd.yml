@@ -2,9 +2,9 @@ name: CI/CD Pipeline node.js
 
 on:
  push:
-   branches: [ "main" ]
+   branches: [ "main", "feature/github_pages" ]
  pull_request:
-   branches: [ "main" ]
+   branches: [ "main", "feature/github_pages" ]
 
 permissions:
   contents: read
