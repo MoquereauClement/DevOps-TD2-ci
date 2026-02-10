@@ -2,4 +2,9 @@ function add(a, b) {
   return a + b;
 }
 
-module.exports = { add };
+function getRandomChampion(champions, random = Math.random) {
+  const index = Math.floor(random() * champions.length);
+  return champions[index];
+}
+
+module.exports = { add , getRandomChampion};
