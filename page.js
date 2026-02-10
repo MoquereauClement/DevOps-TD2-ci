@@ -1,4 +1,4 @@
-const { getRandomChampion } = require("./app");
+import { getRandomChampion } from './app.js'
 const TableChamps = [
     "Aatrox",
     "Ambessa",
