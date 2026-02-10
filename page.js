@@ -1,4 +1,3 @@
-import { getRandomChampion } from './app.js'
 const TableChamps = [
     "Aatrox",
     "Ambessa",
@@ -176,6 +175,11 @@ const TableChamps = [
 if (typeof document !== "undefined") {
   const Button = document.getElementById("roll");
   Button.addEventListener("click", rollChampions);
+}
+
+function getRandomChampion(champions, random = Math.random) {
+  const index = Math.floor(random() * champions.length);
+  return champions[index];
 }
 
 function rollChampions() {
