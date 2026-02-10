@@ -1,5 +1,4 @@
-const { add, getRandomChampion } = require('./app');
-
+const { getRandomChampion } = require("./app");
 const TableChamps = [
     "Aatrox",
     "Ambessa",
@@ -174,17 +173,11 @@ const TableChamps = [
     "Zoe",
     "Zyra"]
 
+if (typeof document !== "undefined") {
+  const Button = document.getElementById("roll");
+  Button.addEventListener("click", rollChampions);
+}
 
-describe('add', () => {
-  test('should return the sum of two numbers', () => {
-    expect(add(1, 2)).toBe(3);
-    expect(add(-1, 5)).toBe(4);
-  });
-});
-
-describe('getRandomChampion', () => {
-  test('should return a champion from TableChamps', () => {
-    const result = getRandomChampion(TableChamps);
-    expect(TableChamps.includes(result)).toBe(true);
-  });
-});
+function rollChampions() {
+    document.getElementById("champ").textContent = getRandomChampion(TableChamps)
+}
